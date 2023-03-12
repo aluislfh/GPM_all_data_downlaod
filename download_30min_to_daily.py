@@ -1,5 +1,7 @@
 import os, sys, math, datetime
 
+# Download GPM data (daily and 30 mins files)
+
 def main(fecha,huser,hpass):
 
     yyyy = fecha[:4]
@@ -109,18 +111,23 @@ def main(fecha,huser,hpass):
     os.system("wget -c --http-user="+huser+" --http-password="+hpass+" https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGHHE.06/"+yyyy+"/"+dj+"/3B-HHR-E.MS.MRG.3IMERG."+fecha+"-S233000-E235959.1410.V06B.HDF5")
     os.system("wget -c --http-user="+huser+" --http-password="+hpass+" https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGHHE.06/"+yyyy+"/"+dj+"/3B-HHR-E.MS.MRG.3IMERG."+fecha+"-S233000-E235959.1410.V06B.HDF5.xml")
 
+    
 def datestdtojd(fecha):
+    
     fmt='%Y%m%d'
     sdtdate = datetime.datetime.strptime(fecha, fmt)
     sdtdate = sdtdate.timetuple()
     jdate = sdtdate.tm_yday
+    
     return(jdate)
 
 
 
-fecha = sys.argv[1]
-huser = sys.argv[2]
-hpass = sys.argv[3]
+if __name__ == '__main__':
 
-main(fecha,huser,hpass)
+    fecha = sys.argv[1]
+    huser = sys.argv[2]
+    hpass = sys.argv[3]
+    
+    main(fecha,huser,hpass)
 
