@@ -25,4 +25,4 @@ python download_daily_to_monthly.py user password
 </br>
 
 
-<strong>convert_gpm_hdf5_to_nc.py</strong> script is a tool to convert GPM monthly data in HDF5 to formato NetCDF4 compatible con Climate Data Tools (IRI - https://github.com/rijaf-iri/CDT/)
+<strong>convert_gpm_hdf5_to_nc.py</strong> script is a tool to convert GPM monthly data in HDF5 format to NetCDF4 format (compatible with Climate Data Tools (IRI - https://github.com/rijaf-iri/CDT/))
