@@ -89,7 +89,7 @@ def main(fecha, huser, hpass, wdir):
 
     if day == '01':
 
-        os.system("wget -c --http-user="+huser+" --http-password="+hpass+" -O "+wdir+"/monthly"+"/3B-MO.MS.MRG.3IMERG."+fecha+"-S000000-E235959."+mes+".V06B.HDF5 https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGM.06/"+yyyy+"/3B-MO.MS.MRG.3IMERG."+fecha+"-S000000-E235959."+mes+".V06B.HDF5")
+        os.system("wget -c --http-user="+huser+" --http-password="+hpass+" -O "+wdir+"/monthly"+"/3B-MO.MS.MRG.3IMERG."+fecha+"-S000000-E235959."+mes+".V06D.HDF5 https://gpm1.gesdisc.eosdis.nasa.gov/data/GPM_L3/GPM_3IMERGM.06/"+yyyy+"/3B-MO.MS.MRG.3IMERG."+fecha+"-S000000-E235959."+mes+".V06D.HDF5")
  
 
 
